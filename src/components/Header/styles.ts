@@ -22,4 +22,10 @@ export const UserInfo = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
+
+  span {
+    font-style: italic;
+    font-size: 1.3rem;
+    font-weight: 400;
+  }
 `

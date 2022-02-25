@@ -22,7 +22,7 @@ const SignIn = () => {
             <Card width='403px'>
                 <img src={logoInter} width={172} height={61} alt={'Logo Inter'} />
                 <C.InputContainer>
-                    <Input placeholder='Entre Com O Email' type='email' />
+                    <Input placeholder='Entre Com O Email' type={'email'} />
                     <Input placeholder='Insira A Senha' type='password' />
                 </C.InputContainer>
                 <C.ButtonContainer>
