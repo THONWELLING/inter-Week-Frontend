@@ -4,6 +4,7 @@ import { useNavigate } from 'react-router-dom'
 import * as C from'./styles'
 import logoInter from '../../assets/images/Inter-orange.png'
 import Circle from '../Circle'
+import Button from '../Button'
 
 const Header = ( ) => {
   const navigate = useNavigate()
@@ -21,7 +22,12 @@ const Header = ( ) => {
        <div>
          <p>Olá, <span className='primary-color font-bold'>Thon</span></p>
          <strong>032145-2</strong> <br />
-         <a href='#' onClick={handleLogoff}>Sair</a>
+         <Button
+          style={{height:'18px'}}
+          onClick={handleLogoff}
+         >
+           Sair
+        </Button>
        </div>
      </C.UserInfo>
    </C.HeaderContainer>

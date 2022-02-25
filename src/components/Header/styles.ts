@@ -23,9 +23,13 @@ export const UserInfo = styled.div`
   justify-content: center;
   align-items: center;
 
-  span {
-    font-style: italic;
-    font-size: 1.3rem;
-    font-weight: 400;
+  p {
+    margin-bottom: 5px;
+
+    span {
+      font-style: italic;
+      font-size: 1.2rem;
+      font-weight: 400;
+    }
   }
 `

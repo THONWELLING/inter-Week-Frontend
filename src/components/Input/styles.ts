@@ -13,8 +13,9 @@ export const InputContainer = styled.div`
   z-index: 1000;
 
   input {
-    font-size: 0.75rem;
+    font-size: 1.2rem;
     font-weight: 400;
+    font-style: italic;
     background: transparent;
     border: 0;
     width: 100%;
