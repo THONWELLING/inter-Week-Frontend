@@ -26,12 +26,12 @@ const StatementItem = ({user, value, type, updatedAt}: StatementItemType) => {
           {
             value.toLocaleString('pt-BR', {
             style: 'currency',
-            currency: 'BRL'}
-            )
+            currency: 'BRL'
+            })
           }
         </p>
         <p>
-          {type === 'pay' ? 'Pago a' : 'Recebido de '}
+          {type === 'pay' ? 'Pago à' : 'Recebido de '}
             <strong>
               {user.firstName} {user.lastName}
             </strong>
