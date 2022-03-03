@@ -45,7 +45,7 @@ const SignIn = () => {
                     />
                     <Input placeholder='Insira A Senha'
                         type='password'
-                         value={password}
+                        value={password}
                         onChange={e => setPassword(e.target.value)}
                     />
                 </C.InputContainer>
