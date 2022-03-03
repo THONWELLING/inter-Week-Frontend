@@ -3,7 +3,7 @@ import styled from 'styled-components'
 
 
 export const DashboardBackground = styled.main`
-  width: 100%;
+  width: 100vw;
   height: 100vh;
   display: flex;
   align-items: center;
@@ -12,7 +12,7 @@ export const DashboardBackground = styled.main`
 `
 
 export const BodyContainer = styled.main`
-  width: 80%;
+  width: 88%;
   margin-top: 40px;
   display: flex;
   justify-content: space-between;

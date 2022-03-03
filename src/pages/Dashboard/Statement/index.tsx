@@ -1,7 +1,8 @@
-import React from 'react'
-import * as C from'./styles'
+import { useState, useEffect } from 'react'
 import { format }from'date-fns'
 import { FiDollarSign} from 'react-icons/fi'
+import * as C from'./styles'
+import { transactions } from'../../../services/resources/pix'
 
 
 interface StatementItemType {
@@ -10,7 +11,7 @@ interface StatementItemType {
     lastName: string
   },
   value: number,
-  type: 'pay' | 'received',
+  type: 'paid' | 'received',
   updatedAt: Date
 }
 
@@ -31,12 +32,12 @@ const StatementItem = ({user, value, type, updatedAt}: StatementItemType) => {
           }
         </p>
         <p>
-          {type === 'pay' ? 'Pago à' : 'Recebido de '}
+          {type === 'paid' ? 'Pago à' : 'Recebido de '}
             <strong>
               {user.firstName} {user.lastName}
             </strong>
         </p>
-        <p>{format(updatedAt, "dd/MM/yyy 'às' HH:mm:'h'")}</p>
+        <p>{format(new Date(updatedAt), "dd/MM/yyy 'às' HH:mm:'h'")}</p>
       </C.StatementItemInfo>
     </C.StatementItemContainer>
     </C.StatementContainer>
@@ -44,31 +45,22 @@ const StatementItem = ({user, value, type, updatedAt}: StatementItemType) => {
 }
 
 const Statement = () => {
+  const [ statements, setStatements] = useState<StatementItemType[]>([])
 
-  const statements: StatementItemType[] = [
-    {
-      user:{
-        firstName: 'Thon',
-        lastName: 'Dani'
-      },
-      value: 250.00,
-      type: 'pay',
-      updatedAt: new Date()
-    },
-    {
-      user:{
-        firstName: 'Manoel',
-        lastName: 'Leonam'
-      },
-      value: 270.00,
-      type: 'received',
-      updatedAt: new Date()
-    }
-  ]
+  const getAllTransactions = async () => {
+    const { data } = await transactions()
+    console.log(`transações => ${statements}`)
+    setStatements(data.transactions)
+  }
+
+  useEffect(() => {
+    getAllTransactions()
+  }, [])
+
   return (
     <C.StatementContainer>
       {
-        statements.map(statement =>
+        statements.length > 0 && statements.map(statement =>
           <StatementItem
             {...statement}
           />

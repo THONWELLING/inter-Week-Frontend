@@ -2,26 +2,30 @@ import styled from 'styled-components'
 
 
 export const HeaderContainer = styled.head`
-  width: 100%;
-  height: 90px;
+  width: 88vw;
+  height: 20vh;
   background-color: ${({theme}) => theme.colors.background};
   display: flex;
   align-items: center;
   justify-content: center;
+  border-radius: 20px;
+  margin-top: 1%;
 `
 
 export const HeaderWrapper = styled.div`
-  width: 80%;
-  height: 90px;
+  width: 100%;
+  height: 100%;
   display: flex;
   align-items: center;
   justify-content: space-between;
+  margin: 0 30px ;
 `
 
 export const UserInfo = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
+  margin: 0 30px;
 
   p {
     margin-bottom: 5px;

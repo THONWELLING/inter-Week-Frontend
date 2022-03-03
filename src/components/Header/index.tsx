@@ -11,7 +11,7 @@ const Header = ( ) => {
   const navigate = useNavigate()
   const { user } = useAuth()
 
-  const initials = user.firstName.substring(0,1)+user.lastName.substring(0,1)
+  const initials = user.firstName.substring(0,1) + user.lastName.substring(0,1)
 
   const handleLogoff = () => {
     navigate('/')
@@ -27,7 +27,7 @@ const Header = ( ) => {
          <p>Olá, <span className='primary-color font-bold'>{user.firstName} {user.lastName}</span></p>
          <strong>{user.accountNumber}-{user.accountDigit}</strong> <br />
          <Button
-          style={{height:'18px'}}
+          style={{height:'16px'}}
           onClick={handleLogoff}
          >
            Sair
