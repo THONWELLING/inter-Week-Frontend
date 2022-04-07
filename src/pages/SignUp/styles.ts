@@ -9,7 +9,8 @@ export const Wrapper = styled.main`
   justify-content: center;
 `
 export const Background = styled.div<{image: any}>`
-  position: absolute;width: 100%;
+  position: absolute;
+  width: 100%;
   top: 0;
   left: 0;
   height: 50vh;
@@ -31,7 +32,7 @@ export const ButtonContainer = styled.div`
   flex-direction: column;
 
   p {
-    font-size: 0,75rem;
+    font-size: 0.75rem;
     font-style: italic;
     font-family: Roboto, sans-serif;
     font-weight: 400;

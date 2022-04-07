@@ -9,7 +9,6 @@ export const HeaderContainer = styled.head`
   align-items: center;
   justify-content: center;
   border-radius: 20px;
-  margin-top: 1%;
 `
 
 export const HeaderWrapper = styled.div`

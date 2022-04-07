@@ -1,17 +1,20 @@
 import styled from "styled-components";
 
 export const Wrapper = styled.main`
-  width: 100%;
+  width: 100vw;
   height: 100vh;
   position: relative;
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
 `
 export const Background = styled.div<{image: any}>`
-  position: absolute;width: 100%;
+  position: absolute;
+  width: 100%;
   top: 0;
   left: 0;
+  right: 0;
   height: 50vh;
   background-image url(${({ image }) => image});
   background-size: contain;
@@ -20,7 +23,7 @@ export const Background = styled.div<{image: any}>`
 
 export const InputContainer = styled.div`
   margin-top: 67px;
-  width: 90%;
+  width: 80%;
   flex: 1;
 `
 export const ButtonContainer = styled.div`
@@ -31,11 +34,12 @@ export const ButtonContainer = styled.div`
   flex-direction: column;
 
   p {
-    font-size: 0,75rem;
+    font-size: 0.75rem;
     font-style: italic;
     font-family: Roboto, sans-serif;
     font-weight: 400;
     color: ${({ theme }) => theme.colors.secondary}
+
   }
 
   a {

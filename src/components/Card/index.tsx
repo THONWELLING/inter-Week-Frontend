@@ -11,7 +11,7 @@ interface CardProps {
 
 const Card = ({
   children,
-  width= '100%',
+  width = '100%',
   height = 'auto',
   noShadow= false,
 }:CardProps) => {

@@ -10,6 +10,7 @@ import Button from '../../components/Button'
 import { Link, useNavigate } from 'react-router-dom'
 
 import useAuth from'../../hooks/useAuth'
+import Footer from '../../components/Footer'
 
 
 const SignIn = () => {
@@ -59,6 +60,7 @@ const SignIn = () => {
                     <p>Ainda Não Tem Cadastro???<Link to='/signup'>Cadastre-se Já</Link></p>
                 </C.ButtonContainer>
             </Card>
+            <Footer />
         </C.Wrapper>
     )
 }

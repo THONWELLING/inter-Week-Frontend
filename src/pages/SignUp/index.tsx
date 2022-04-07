@@ -8,6 +8,7 @@ import logoInter from'../../assets/images/Inter-orange.png'
 import Input from '../../components/Input'
 import Button from '../../components/Button'
 import { Link, useNavigate } from 'react-router-dom'
+import Footer from '../../components/Footer'
 
 
 const SignUp = () => {
@@ -38,6 +39,7 @@ const SignUp = () => {
                     <p>Já Tem Uma Conta???<Link to='/'>Entre Já</Link></p>
                 </C.ButtonContainer>
             </Card>
+            <Footer />
         </C.Wrapper>
     )
 }
